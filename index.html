@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sayali Mahamuni | Software Tester</title>
+  <meta name="description" content="Sayali Mahamuni - Fresher Software Tester. Manual & Automation testing, Selenium, TestNG, Postman, SQL. View projects and contact." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#1f3c88;
+      --accent:#00b4d8;
+      --muted:#555;
+      --bg:#f5f7fa;
+      --card:#ffffff;
+      --gap:40px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:'Poppins',system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background:var(--bg);
+      color:#222;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+
+    /* Header / Hero */
+    header{
+      background:linear-gradient(135deg,var(--primary),var(--accent));
+      color:white;
+      padding:56px 20px;
+      text-align:center;
+    }
+    header h1{
+      font-size:clamp(1.8rem, 5vw, 2.6rem);
+      margin:0 0 8px;
+      font-weight:700;
+      background: linear-gradient(90deg, #ffffff, #d1e8ff, #ffffff);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientMove 4s ease infinite;
+    }
+    header p{
+      margin:0;
+      font-size:clamp(0.9rem, 2.5vw, 1.05rem);
+      opacity:0;
+      animation: fadeUp 1s ease forwards;
+      animation-delay: 0.5s;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% center; }
+      50% { background-position: 100% center; }
+      100% { background-position: 0% center; }
+    }
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Layout container */
+    .container{max-width:1100px;margin:40px auto;padding:0 18px}
+
+    h2{
+      color:var(--primary);
+      font-size:1.25rem;
+      margin:0 0 18px;
+      position:relative;
+      padding-bottom:8px;
+    }
+    h2::after{
+      content:"";
+      position:absolute;
+      left:0;bottom:0;
+      width:60px;height:4px;background:var(--accent);
+      border-radius:2px;
+    }
+
+    /* About */
+    .about{
+      background:var(--card);
+      padding:22px;
+      border-radius:12px;
+      box-shadow:0 6px 18px rgba(31,60,136,0.06);
+      margin-bottom:var(--gap);
+    }
+    .about p{margin:0;color:var(--muted)}
+
+    /* Skills */
+    .skills-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+      gap:10px;
+      margin-bottom:var(--gap);
+    }
+    .skill-badge{
+      background:#e8f7fb;
+      padding:8px 14px;
+      border-radius:20px;
+      font-weight:600;
+      color:var(--primary);
+      text-align:center;
+      box-shadow:0 6px 16px rgba(31,60,136,0.04);
+      transition:transform .18s ease;
+    }
+    .skill-badge:hover{transform:translateY(-4px)}
+
+    /* Why Hire Me */
+    .why{
+      background:linear-gradient(180deg,#fff 0%,#fbfbff 100%);
+      padding:20px;
+      border-radius:12px;
+      margin-bottom:var(--gap);
+      box-shadow:0 6px 18px rgba(31,60,136,0.04);
+    }
+    .why ul{margin:12px 0 0;padding-left:20px;color:var(--muted)}
+    .why li{margin-bottom:10px;font-weight:500}
+
+    /* Projects - Trade view cards */
+    .projects{display:flex;flex-direction:column;gap:30px;margin-bottom:var(--gap)}
+    .trade-card{
+      background:var(--card);
+      border-radius:10px;
+      border:1px solid #e6e9ef;
+      overflow:hidden;
+      transition:transform .22s ease,box-shadow .22s ease;
+      box-shadow:0 2px 6px rgba(12,24,50,0.04);
+    }
+    .trade-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 14px 34px rgba(12,24,50,0.09);
+    }
+    .trade-card-header{
+      background:var(--primary);
+      color:white;
+      padding:16px 20px;
+      font-weight:700;
+      font-size:1.05rem;
+      position:relative;
+    }
+    .trade-card-header::after{
+      content:"";
+      position:absolute;
+      left:16px;bottom:-3px;
+      width:48px;height:4px;background:var(--accent);
+      border-radius:3px;
+    }
+    .trade-card-body{
+      padding:22px;
+      color:var(--muted);
+      line-height:1.7;
+      font-size:0.98rem;
+    }
+    .trade-card-footer{
+      padding:14px 20px;
+      background:#fbfdff;
+      text-align:right;
+    }
+    .trade-card-footer a{
+      display:inline-block;
+      padding:10px 18px;
+      background:var(--primary);
+      color:white;
+      text-decoration:none;
+      border-radius:22px;
+      font-weight:600;
+      transition:background .18s ease,transform .18s ease;
+    }
+    .trade-card-footer a:hover{
+      background:var(--accent);
+      transform:translateY(-3px);
+    }
+
+    /* Contact CTA */
+    .cta{
+      margin:var(--gap) 0;
+      background:linear-gradient(135deg,var(--accent),var(--primary));
+      color:white;
+      padding:28px;
+      border-radius:12px;
+      text-align:center;
+      box-shadow:0 10px 30px rgba(31,60,136,0.08);
+    }
+    .cta p{margin:0 0 18px;font-weight:600}
+    .cta .cta-buttons{
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-block;
+      padding:10px 18px;
+      border-radius:22px;
+      text-decoration:none;
+      font-weight:700;
+      background:white;
+      color:var(--primary);
+    }
+    .btn:hover{opacity:.95;transform:translateY(-3px)}
+
+    /* Footer */
+    footer{
+      padding:18px;
+      text-align:center;
+      color:#fff;
+      background:transparent;
+      margin-top:26px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Sayali Mahamuni</h1>
+  <p>Turning Bugs into Business Value — Fresher Software Tester</p>
+  <br>
+<a href="https://github.com/Sayali-Mahamuni00/SayaliMahamuni-Portfolio/raw/main/Resume-SayaliMahamuni.pdf" 
+   download 
+   style="display:inline-block; margin-top:12px; padding:10px 20px; background:white; color:#1f3c88; font-weight:600; border-radius:25px; text-decoration:none; box-shadow:0 4px 6px rgba(0,0,0,0.1); transition:all 0.3s;">
+   Download Resume
+</a>
+
+</header>
+
+  <main class="container">
+
+    <section class="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Me</h2>
+      <p>
+        I am a detail-oriented and results-driven Software Development Engineer in Test (SDET) with strong foundations in both manual and automation testing.
+        Having completed a hands-on SDET training program, I have gained expertise in Selenium WebDriver, TestNG, Java, SQL, API testing with Postman, and modern test frameworks like Page Object Model (POM).</p>
+      <br>
+      <p>My approach combines analytical thinking with precision in execution — from creating clear, traceable test cases to building robust automation scripts that reduce regression time and improve product reliability.</p>
+      <br>
+      <p>Beyond core testing, I continuously explore AI-assisted QA techniques such as prompt engineering to streamline test artifact creation and enhance coverage. I am committed to delivering bug-free, user-friendly software while adapting quickly to new tools, codebases, and agile team environments.</p>
+      <br>
+      <p>I am ready to contribute to any team that values quality as a competitive advantage and would welcome a practical test to demonstrate my skills in action.</p>
+  
+    </section>
+
+    <section aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <div class="skills-grid" role="list">
+        <span class="skill-badge">Manual Testing</span>
+        <span class="skill-badge">Automation Testing</span>
+        <span class="skill-badge">Selenium WebDriver</span>
+        <span class="skill-badge">TestNG</span>
+        <span class="skill-badge">Postman (API)</span>
+        <span class="skill-badge">SQL / Oracle</span>
+        <span class="skill-badge">JIRA</span>
+        <span class="skill-badge">GitHub</span>
+        <span class="skill-badge">Page Object Model</span>
+        <span class="skill-badge">Test Documentation</span>
+      </div>
+    </section>
+
+    <section aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+
+      <div class="projects">
+
+        <article class="trade-card">
+          <div class="trade-card-header">SauceDemo — Manual Testing</div>
+          <div class="trade-card-body">
+            <strong>Overview:</strong> Performed end-to-end manual testing on an e-commerce demo app to validate core user journeys (login, product search, add-to-cart, checkout).
+            <br><br>
+            <strong>What I delivered:</strong> 50+ test cases (positive, negative, boundary), Requirement Traceability Matrix ensuring 100% feature coverage, reproducible defect reports with steps, severity, and suggested fixes.
+            <br><br>
+            <strong>Why it matters:</strong> Demonstrates my ability to analyse requirements, convert them into test cases, and communicate defects clearly to developers and stakeholders.
+          </div>
+          <div class="trade-card-footer">
+            <a href="https://github.com/Sayali-Mahamuni00" target="_blank">View on GitHub</a>
+          </div>
+        </article>
+
+        <article class="trade-card">
+          <div class="trade-card-header">OpenCart — Automation Testing</div>
+          <div class="trade-card-body">
+            <strong>Overview:</strong> Built automation for key e-commerce flows using Selenium WebDriver + TestNG and organised tests using Page Object Model (POM).
+            <br><br>
+            <strong>What I delivered:</strong> Modular automation scripts, data-driven test scenarios, and TestNG reports summarising execution outcomes.
+            <br><br>
+            <strong>Why it matters:</strong> Shows practical understanding of automation architecture, maintainability, and how automated tests speed up regression cycles.
+          </div>
+          <div class="trade-card-footer">
+            <a href="https://github.com/Sayali-Mahamuni00" target="_blank">View on GitHub</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="why" aria-labelledby="why-heading">
+      <h2 id="why-heading">Why Hire Me?</h2>
+      <ul>
+        <li>Fast learner — I adapt quickly to new tools, codebases and team processes.</li>
+        <li>Strong fundamentals — practical experience with both manual and automation testing on real applications.</li>
+        <li>Clear reporting — I write reproducible bug reports, structured test cases, and RTMs that stakeholders can act on.</li>
+        <li>Problem-solver — I don’t just find bugs; I investigate root causes and suggest practical workarounds.</li>
+        <li>Willing to demonstrate — I welcome a small practical test so you can evaluate my hands-on abilities directly.</li>
+      </ul>
+    </section>
+
+    <section class="cta">
+      <h2 style="color:inherit; margin-bottom:12px">Let’s Work Together</h2>
+      <p>If you'd like to evaluate me quickly, give me a small testing task and I'll return a clear work report within the agreed scope.</p>
+      <div class="cta-buttons">
+        <a class="btn" href="mailto:sayali.mahamuni00@gmail.com">Email Me</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2025 Sayali Mahamuni — <a href="mailto:sayali.mahamuni00@gmail.com" style="color:rgba(255,255,255,0.9);text-decoration:underline">sayali.mahamuni00@gmail.com</a>
+  </footer>
+
+</body>
+</html>
